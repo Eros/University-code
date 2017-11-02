@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <memory.h>
 
+int checkString(const char *s, size_t n);
+
 int main()
 {
     char s[32];
