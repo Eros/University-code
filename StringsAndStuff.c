@@ -245,7 +245,7 @@ char GetValidatedYesNo()
 	{
 		scanf("%c", &reply, 1);
 		Clearstdin();
-		reply = toupper(reply);
+		reply = (char) toupper(reply);
 	} while ((reply != 'Y') && (reply != 'N'));
 
 	return reply;

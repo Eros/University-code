@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o"
+  "CMakeFiles/UniversityStuff.dir/MySkeleton.c.o"
   "UniversityStuff.pdb"
   "UniversityStuff"
 )

@@ -123,6 +123,33 @@ UniversityStuff/fast:
 	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/build
 .PHONY : UniversityStuff/fast
 
+MySkeleton.o: MySkeleton.c.o
+
+.PHONY : MySkeleton.o
+
+# target to build an object file
+MySkeleton.c.o:
+	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/MySkeleton.c.o
+.PHONY : MySkeleton.c.o
+
+MySkeleton.i: MySkeleton.c.i
+
+.PHONY : MySkeleton.i
+
+# target to preprocess a source file
+MySkeleton.c.i:
+	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/MySkeleton.c.i
+.PHONY : MySkeleton.c.i
+
+MySkeleton.s: MySkeleton.c.s
+
+.PHONY : MySkeleton.s
+
+# target to generate assembly for a file
+MySkeleton.c.s:
+	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/MySkeleton.c.s
+.PHONY : MySkeleton.c.s
+
 StringsAndStuff.o: StringsAndStuff.c.o
 
 .PHONY : StringsAndStuff.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... UniversityStuff"
+	@echo "... MySkeleton.o"
+	@echo "... MySkeleton.i"
+	@echo "... MySkeleton.s"
 	@echo "... StringsAndStuff.o"
 	@echo "... StringsAndStuff.i"
 	@echo "... StringsAndStuff.s"
