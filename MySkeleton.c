@@ -2,6 +2,9 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <memory.h>
+#include <stdlib.h>
+
+#define MAX_DIGITS 20
 
 int checkString(const char *s, size_t n);
 
@@ -28,5 +31,28 @@ int checkString(const char *s, size_t n)
             return 0;
 
     return 1;
+}
+
+int checkInput(int value, int okay)
+{
+    do
+    {
+        char input[MAX_DIGITS + 2];
+        printf("Number required");
+        fflush(stdout);
+        if(fgets(input, sizeof(input), stdin))
+        {
+            char *chk = NULL;
+            value = (int) strtol(input, &chk, 10);
+            if(isspace(*chk) || *chk == 0)
+            {
+                okay = 1;
+            }
+            else
+            {
+                printf("\n%s is not a valid integer", value);
+            }
+        }
+    } while(!okay);
 }
 
