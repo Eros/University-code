@@ -233,7 +233,7 @@ char GetValidatedString(char ValidatedString[], int MinLength, int MaxLength)
 		}
 	} while (Success == cFalse);
 	//Transfer validated string to ValidatedString
-	strcpy(ValidatedString, MaxLength + 1, Input);
+	strcpy(ValidatedString, sizeof(MaxLength) + 1, Input);
 	return(Success); // Returns cTrue
 }
 
