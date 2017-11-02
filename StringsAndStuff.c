@@ -29,6 +29,14 @@ int main()
 
 	// code goes here
 
+    char FirstName[20] = "";
+    char LastName[20] = "";
+    char FullName[40] = "";
+
+    fgets(FirstName, sizeof(FirstName), stdin);
+    fgets(LastName, sizeof(LastName), stdin);
+
+
 
 	printf("\n\nPress the ENTER key to continue.");
 	getchar();
@@ -75,14 +83,14 @@ char GetValidatedChar(char Min, char Max)
 // Gets user-inputted integer value. Validated for data type & value (Min->Max).
 int GetValidatedInteger(int Min, int Max)
 { //DECLARATIONS + INITILISATION of values
-  // Local Constants: 
+  // Local Constants:
 	const int cTrue = 1, cFalse = 0;
-	// Input Variables: 
+	// Input Variables:
 	float Input = 0; // NB Input read into a FLOAT
-					 // Intermediate Variables: 
-	int ItemRead = cFalse; //Flag 
+					 // Intermediate Variables:
+	int ItemRead = cFalse; //Flag
 	int Valid = cFalse; //Flag - Mandatory initialisation to cFalse
-						// Output Variables: // None //----------------------------------------------------------- 
+						// Output Variables: // None //-----------------------------------------------------------
 	do {
 		/* Read. NB scanf_s() returns the number of items successfully read. */
 		ItemRead = scanf_s("%f", &Input);
@@ -168,17 +176,17 @@ char GetValidatedString(char ValidatedString[], int MinLength, int MaxLength)
 		return(Success);
 	}
 	do
-	{ //Ensure that input not longer than InputArrayMaxLen 
+	{ //Ensure that input not longer than InputArrayMaxLen
 		do
 		{
-			//(Re-)initialisations: 
+			//(Re-)initialisations:
 			YesorNo = 'Y';
-			Input[InputArrayMaxLen + 1] = 'z'; //} Set to any values ("zz" here) 
+			Input[InputArrayMaxLen + 1] = 'z'; //} Set to any values ("zz" here)
 			Input[InputArrayMaxLen] = 'z'; //} != "\n\0" ready for test below.
-			fgets(Input, sizeof(Input), stdin); //NB fgets() - reads in '\n' from stdin (unless input is longer than sizeof(Input) in // which case it truncates the input storing '\0' in the final byte of // Input[] to create a string). 
+			fgets(Input, sizeof(Input), stdin); //NB fgets() - reads in '\n' from stdin (unless input is longer than sizeof(Input) in // which case it truncates the input storing '\0' in the final byte of // Input[] to create a string).
 			Clearstdin(); //Clear any remaining data in stdin buffer.
 
-						   //If Input was too long to store in Input[] (=> fgets() truncated it) 
+						   //If Input was too long to store in Input[] (=> fgets() truncated it)
 			if ((Input[InputArrayMaxLen + 1] == '\0') && (Input[InputArrayMaxLen] != '\n'))
 			{
 				printf("\n\nRequired maximum length for called GetValidatedString() function " "\ncannot exceed %d characters", InputArrayMaxLen);
@@ -187,26 +195,26 @@ char GetValidatedString(char ValidatedString[], int MinLength, int MaxLength)
 				if (YesorNo == 'N')
 				{
 					printf("Data not read. Please contact developer.");
-					getchar(); 
-					return(Success); //Returns cFalse 
+					getchar();
+					return(Success); //Returns cFalse
 				}
 				else
 				{
 					printf("\nRe-enter(%d - %d characters): ", MinLength, MaxLength);
 				}
 			}
-			else //Input not longer than InputArrayMaxLen 
+			else //Input not longer than InputArrayMaxLen
 			{
 				YesorNo = 'N';
 			}
 		} while (YesorNo == 'Y');
 
-		//At this stage should have a character array, where meaningful input end in "....\n\0..." 
-		//Replace '\n' with '\0' to create the required string 
-		Length = strlen(Input) - 1; //NB Length contains the correct updated string length 
+		//At this stage should have a character array, where meaningful input end in "....\n\0..."
+		//Replace '\n' with '\0' to create the required string
+		Length = strlen(Input) - 1; //NB Length contains the correct updated string length
 		Input[Length] = '\0';
 
-		//String length validation (MinLength -> Maxlength) 
+		//String length validation (MinLength -> Maxlength)
 		if ((Length < (size_t)MinLength) || (Length >(size_t)MaxLength))
 		{
 			printf("Invalid! Please try again (Length %d-%d): ", MinLength, MaxLength);
@@ -216,7 +224,7 @@ char GetValidatedString(char ValidatedString[], int MinLength, int MaxLength)
 			Success = cTrue;
 		}
 	} while (Success == cFalse);
-	//Transfer validated string to ValidatedString 
+	//Transfer validated string to ValidatedString
 	strcpy_s(ValidatedString, MaxLength + 1, Input);
 	return(Success); // Returns cTrue
 }
