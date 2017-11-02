@@ -57,38 +57,38 @@ include CMakeFiles/UniversityStuff.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/UniversityStuff.dir/flags.make
 
-CMakeFiles/UniversityStuff.dir/main.c.o: CMakeFiles/UniversityStuff.dir/flags.make
-CMakeFiles/UniversityStuff.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/george/Documents/Programming/C/UniversityStuff/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/UniversityStuff.dir/main.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/UniversityStuff.dir/main.c.o   -c /Users/george/Documents/Programming/C/UniversityStuff/main.c
+CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o: CMakeFiles/UniversityStuff.dir/flags.make
+CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o: ../StringsAndStuff.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/george/Documents/Programming/C/UniversityStuff/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o   -c /Users/george/Documents/Programming/C/UniversityStuff/StringsAndStuff.c
 
-CMakeFiles/UniversityStuff.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/UniversityStuff.dir/main.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/george/Documents/Programming/C/UniversityStuff/main.c > CMakeFiles/UniversityStuff.dir/main.c.i
+CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/george/Documents/Programming/C/UniversityStuff/StringsAndStuff.c > CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.i
 
-CMakeFiles/UniversityStuff.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/UniversityStuff.dir/main.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/george/Documents/Programming/C/UniversityStuff/main.c -o CMakeFiles/UniversityStuff.dir/main.c.s
+CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/george/Documents/Programming/C/UniversityStuff/StringsAndStuff.c -o CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.s
 
-CMakeFiles/UniversityStuff.dir/main.c.o.requires:
+CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o.requires:
 
-.PHONY : CMakeFiles/UniversityStuff.dir/main.c.o.requires
+.PHONY : CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o.requires
 
-CMakeFiles/UniversityStuff.dir/main.c.o.provides: CMakeFiles/UniversityStuff.dir/main.c.o.requires
-	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/main.c.o.provides.build
-.PHONY : CMakeFiles/UniversityStuff.dir/main.c.o.provides
+CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o.provides: CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o.requires
+	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o.provides.build
+.PHONY : CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o.provides
 
-CMakeFiles/UniversityStuff.dir/main.c.o.provides.build: CMakeFiles/UniversityStuff.dir/main.c.o
+CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o.provides.build: CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o
 
 
 # Object files for target UniversityStuff
 UniversityStuff_OBJECTS = \
-"CMakeFiles/UniversityStuff.dir/main.c.o"
+"CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o"
 
 # External object files for target UniversityStuff
 UniversityStuff_EXTERNAL_OBJECTS =
 
-UniversityStuff: CMakeFiles/UniversityStuff.dir/main.c.o
+UniversityStuff: CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o
 UniversityStuff: CMakeFiles/UniversityStuff.dir/build.make
 UniversityStuff: CMakeFiles/UniversityStuff.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/george/Documents/Programming/C/UniversityStuff/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable UniversityStuff"
@@ -99,7 +99,7 @@ CMakeFiles/UniversityStuff.dir/build: UniversityStuff
 
 .PHONY : CMakeFiles/UniversityStuff.dir/build
 
-CMakeFiles/UniversityStuff.dir/requires: CMakeFiles/UniversityStuff.dir/main.c.o.requires
+CMakeFiles/UniversityStuff.dir/requires: CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o.requires
 
 .PHONY : CMakeFiles/UniversityStuff.dir/requires
 

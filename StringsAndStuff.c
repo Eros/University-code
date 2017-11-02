@@ -36,8 +36,8 @@ int main()
     fgets(FirstName, sizeof(FirstName), stdin);
     fgets(LastName, sizeof(LastName), stdin);
 
-    strcpy(FullName, 2, FirstName);
-    strcpy(FullName, 2, LastName);
+    strcpy(FullName, FirstName);
+    strcpy(FullName, LastName);
 
     GetValidatedString(FirstName, 2, sizeof(FirstName) - 1);
     GetValidatedString(LastName, 2, sizeof(LastName) - 1);
@@ -74,7 +74,7 @@ char GetValidatedChar(char Min, char Max)
 
 	do
 	{
-		scanf_s("%c", &Input, 1);
+		scanf("%c", &Input, 1);
 		Clearstdin();
 
 		Input = toupper(Input);
@@ -101,7 +101,7 @@ int GetValidatedInteger(int Min, int Max)
 						// Output Variables: // None //-----------------------------------------------------------
 	do {
 		/* Read. NB scanf_s() returns the number of items successfully read. */
-		ItemRead = scanf_s("%f", &Input);
+		ItemRead = scanf("%f", &Input);
 		Clearstdin();
 		/* Validate - Non-numeric? (In which case scanf_s() will not have read in anything) */
 		if (ItemRead == cFalse) {
@@ -139,7 +139,7 @@ float GetValidatedFloat(float Min, float Max)
 	do
 	{
 		/* Read */
-		ItemRead = scanf_s("%f", &Input); /* Recall, scanf_s() returns the number of items successfully read */
+		ItemRead = scanf("%f", &Input); /* Recall, scanf_s() returns the number of items successfully read */
 		Clearstdin();
 
 		/* Validate - Non-numeric? (In which case scanf_s() will not have read in anything) */
@@ -233,7 +233,7 @@ char GetValidatedString(char ValidatedString[], int MinLength, int MaxLength)
 		}
 	} while (Success == cFalse);
 	//Transfer validated string to ValidatedString
-	strcpy_s(ValidatedString, MaxLength + 1, Input);
+	strcpy(ValidatedString, MaxLength + 1, Input);
 	return(Success); // Returns cTrue
 }
 
@@ -243,7 +243,7 @@ char GetValidatedYesNo()
 	char reply;
 	do
 	{
-		scanf_s("%c", &reply, 1);
+		scanf("%c", &reply, 1);
 		Clearstdin();
 		reply = toupper(reply);
 	} while ((reply != 'Y') && (reply != 'N'));

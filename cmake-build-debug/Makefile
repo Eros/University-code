@@ -123,32 +123,32 @@ UniversityStuff/fast:
 	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/build
 .PHONY : UniversityStuff/fast
 
-main.o: main.c.o
+StringsAndStuff.o: StringsAndStuff.c.o
 
-.PHONY : main.o
+.PHONY : StringsAndStuff.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/main.c.o
-.PHONY : main.c.o
+StringsAndStuff.c.o:
+	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.o
+.PHONY : StringsAndStuff.c.o
 
-main.i: main.c.i
+StringsAndStuff.i: StringsAndStuff.c.i
 
-.PHONY : main.i
+.PHONY : StringsAndStuff.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/main.c.i
-.PHONY : main.c.i
+StringsAndStuff.c.i:
+	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.i
+.PHONY : StringsAndStuff.c.i
 
-main.s: main.c.s
+StringsAndStuff.s: StringsAndStuff.c.s
 
-.PHONY : main.s
+.PHONY : StringsAndStuff.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/main.c.s
-.PHONY : main.c.s
+StringsAndStuff.c.s:
+	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/StringsAndStuff.c.s
+.PHONY : StringsAndStuff.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... UniversityStuff"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... StringsAndStuff.o"
+	@echo "... StringsAndStuff.i"
+	@echo "... StringsAndStuff.s"
 .PHONY : help
 
 

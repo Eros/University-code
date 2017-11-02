@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/george/Documents/Programming/C/UniversityStuff/main.c">
+		<Unit filename="/Users/george/Documents/Programming/C/UniversityStuff/StringsAndStuff.c">
 			<Option target="UniversityStuff"/>
 		</Unit>
 		<Unit filename="/Users/george/Documents/Programming/C/UniversityStuff/CMakeLists.txt">
