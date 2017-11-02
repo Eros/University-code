@@ -36,6 +36,14 @@ int main()
     fgets(FirstName, sizeof(FirstName), stdin);
     fgets(LastName, sizeof(LastName), stdin);
 
+    strcpy(FullName, 2, FirstName);
+    strcpy(FullName, 2, LastName);
+
+    GetValidatedString(FirstName, 2, sizeof(FirstName) - 1);
+    GetValidatedString(LastName, 2, sizeof(LastName) - 1);
+    GetValidatedString(FullName, 2, sizeof(LastName) - 1);
+
+    printf("%s", FullName);
 
 
 	printf("\n\nPress the ENTER key to continue.");
