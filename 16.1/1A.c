@@ -17,6 +17,8 @@
 #define MIN_YEAR 1900
 #define MAX_YEAR 2017 //durrr
 
+void ShowMainMenu();
+
 struct NAME
 {
     char Title[MAX_LEN_NAME_TITLE + 1];
@@ -36,5 +38,20 @@ struct BOOK
 
 int main()
 {
-
+    return 0;
 }
+
+void ShowMainMenu()
+{
+    system("cls");
+    printf("%s", GREETING);
+    printf("\n MAIN MENU\n-------");
+    printf("\n1. Display all");
+    printf("\n2.Display all by selected author");
+    printf("\n3.Update a entry");
+    printf("\n4.Add entry");
+    printf("\n5.Delete entry");
+    printf("\n0.Exit program");
+    printf("\nEnter your choice: ");
+}
+
