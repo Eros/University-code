@@ -42,8 +42,8 @@
       <file leaf-file-name="MySkeleton.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MySkeleton.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="55" column="19" lean-forward="false" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+            <state relative-caret-position="0">
+              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -52,8 +52,8 @@
       <file leaf-file-name="1A.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/16.1/1A.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="408">
+              <caret line="26" column="25" lean-forward="false" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -346,7 +346,7 @@
       <updated>1509631034732</updated>
       <workItem from="1509631038724" duration="1141000" />
       <workItem from="1509633022489" duration="724000" />
-      <workItem from="1509736856306" duration="611000" />
+      <workItem from="1509736856306" duration="837000" />
     </task>
     <task id="LOCAL-00001" summary="added chars for names">
       <created>1509631334353</created>
@@ -418,11 +418,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509737313372</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added method for the main menu">
+      <created>1509737477089</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1509737477089</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2476000" />
+    <option name="totallyTimeSpent" value="2702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -466,7 +473,8 @@
     <MESSAGE value="think i broke clion" />
     <MESSAGE value="added this stuff" />
     <MESSAGE value="added more work towards it" />
-    <option name="LAST_COMMIT_MESSAGE" value="added more work towards it" />
+    <MESSAGE value="added method for the main menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="added method for the main menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -548,16 +556,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MySkeleton.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="55" column="19" lean-forward="false" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/16.1/1A.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="408">
+          <caret line="26" column="25" lean-forward="false" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
           <folding />
         </state>
       </provider>

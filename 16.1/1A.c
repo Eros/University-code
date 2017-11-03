@@ -18,6 +18,13 @@
 #define MAX_YEAR 2017 //durrr
 
 void ShowMainMenu();
+void Pause();
+void DisplayRecordsAll();
+void AddRecords();
+void DisplayRecordsSelected();
+void UpdateRecords();
+void DeleteRecords();
+void SaveRecordsToFile();
 
 struct NAME
 {
@@ -55,3 +62,38 @@ void ShowMainMenu()
     printf("\nEnter your choice: ");
 }
 
+void DisplayRecordsAll()
+{
+    printf("\nCalled: Display all records"); Pause();
+}
+
+void DisplayRecordsSelected()
+{
+    printf("Called: Selected records to be displayed"); Pause();
+}
+
+void AddRecords()
+{
+    printf("Called: AddRecord"); Pause();
+}
+
+void UpdateRecords()
+{
+    printf("Called: UpdateRecord"); Pause();
+}
+
+void DeleteRecords()
+{
+    printf("Called: DeleteRecord"); Pause();
+}
+
+void SaveAllRecordsToFile()
+{
+    printf("Called: SaveAllRecordsToFile"); Pause();
+}
+
+void Pause()
+{
+    getchar();
+    system("pause");
+}
