@@ -23,3 +23,18 @@ struct NAME
     char FirstName[MAX_LEN_NAME_FIRST];
     char LastName[MAX_LEN_NAME_LAST];
 };
+
+struct BOOK
+{
+    struct NAME author;
+    int PublicationYear; //min year - max year
+    float Price; //min price - max price
+    char Title[MAX_LEN_BOOK_TITLE + 1];
+};
+
+//need to add the methods
+
+int main()
+{
+
+}
