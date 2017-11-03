@@ -25,6 +25,7 @@ void DisplayRecordsSelected();
 void UpdateRecords();
 void DeleteRecords();
 void SaveRecordsToFile();
+int GetValidatedInteger(int Min, int Max);
 
 struct NAME
 {
@@ -56,7 +57,34 @@ int main()
     do
     {
         ShowMainMenu();
+        MenuChoice = GetValidatedInteger(0, 5);
 
+        switch(MenuChoice)
+        {
+            case 1:
+                DisplayRecordsAll();
+                break;
+            case 2:
+                DisplayRecordsSelected();
+                break;
+            case 3:
+                UpdateRecords();
+                SaveAllRecordsToFile();
+                break;
+            case 4:
+                AddRecords();
+                SaveAllRecordsToFile();
+                break;
+            case 5:
+                DeleteRecords();
+                SaveAllRecordsToFile();
+                break;
+            case 0:
+                printf("\nQuitting program");
+                printf("\n\n");
+                Pause();
+                break;
+        }
     } while(MenuChoice != 0);
 
     return 0;
