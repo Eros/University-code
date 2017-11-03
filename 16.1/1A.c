@@ -26,6 +26,7 @@ void UpdateRecords();
 void DeleteRecords();
 void SaveRecordsToFile();
 int GetValidatedInteger(int Min, int Max);
+void Clearstdin();
 
 struct NAME
 {
@@ -170,4 +171,10 @@ int GetValidatedInteger(int Min, int Max)
         }
     } while (Valid == cFalse);
     return((int)Input);
+}
+
+void Clearstdin()
+{
+    char Discard[255] = "";
+    fgets(Discard, sizeof(Discard), stdin);
 }
