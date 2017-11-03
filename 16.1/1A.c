@@ -45,6 +45,20 @@ struct BOOK
 
 int main()
 {
+
+    struct BOOK AllRecords[MAX_NUM_RECORDS];
+    int NumRecords = 0;
+
+    int MenuChoice = 0;
+
+    ReadAllRecordsFromFile();
+
+    do
+    {
+        ShowMainMenu();
+
+    } while(MenuChoice != 0);
+
     return 0;
 }
 
@@ -96,4 +110,36 @@ void Pause()
 {
     getchar();
     system("pause");
+}
+
+int GetValidatedInteger(int Min, int Max)
+{
+    const int cTrue = 1, cFalse = 0;
+
+    float Input = 0;
+
+    int ItemRead = cFalse;
+    int Valid = cFalse;
+    do {
+        ItemRead = scanf("%f", &Input);
+        Clearstdin();
+        if (ItemRead == cFalse) {
+            printf("Invalid - must be a number! Please try again (%d-%d): ", Min, Max);
+        }
+            /* Validate - Not whole number? */
+        else if (Input != (int)Input) /* NB (int)Input truncates a float value */
+        {
+            printf("Invalid - must be an integer! Please try again (%d-%d): ", Min, Max);
+        }
+
+        else if ((Input < Min) || (Input > Max))
+        {
+            printf("Invalid - out-of-range! Please try again (%d-%d): ", Min, Max);
+        }
+        else
+        {
+            Valid = cTrue;
+        }
+    } while (Valid == cFalse);
+    return((int)Input);
 }
