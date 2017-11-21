@@ -23,7 +23,7 @@ char GetValidatedYesNo();
 
 int main()
 {
-	printf("This is file: \"Skeleton.c\"\nPlease hit enter to continue:"); // print file name as work-around to VS bug not displaying excluded project files
+	printf("This is file: \"StringsAndStuff.c\"\nPlease hit enter to continue:"); // print file name as work-around to VS bug not displaying excluded project files
 	getchar();
 	ClearScreen();
 
@@ -69,15 +69,15 @@ char GetValidatedChar(char Min, char Max)
 {
 	char Input = '\0';
 
-	Min = toupper(Min);
-	Max = toupper(Max);
+	Min = (char) toupper(Min);
+	Max = (char) toupper(Max);
 
 	do
 	{
 		scanf("%c", &Input, 1);
 		Clearstdin();
 
-		Input = toupper(Input);
+		Input = (char) toupper(Input);
 		if ((Input < Min) || (Input > Max))
 		{
 			printf("Invalid! Please try again  (%c - %c): ", Min, Max);
@@ -160,7 +160,8 @@ float GetValidatedFloat(float Min, float Max)
 
 	} while (Valid == cFalse);
 
-	return(Input); /* Code only reaches this point after user has inputted valid data */
+	return(Input);
+
 }
 
 // Gets user-inputted string, validating it for string length ONLY.
@@ -178,7 +179,7 @@ char GetValidatedString(char ValidatedString[], int MinLength, int MaxLength)
 				   // Check that requested maximum length is shorter than InputArrayMaxLen
 	if (MaxLength > (int)InputArrayMaxLen)
 	{
-		printf("\n\nRequired maximum length for called GetValidatedString() function""\ncannot exceed %d characters", (int)InputArrayMaxLen);
+		printf("\n\nRequired maximum length for called GetValidatedString() function""\ncannot exceed %d characters", (int) InputArrayMaxLen);
 		printf("\nData not read. Please contact developer.");
 		getchar();
 		return(Success);
@@ -197,7 +198,7 @@ char GetValidatedString(char ValidatedString[], int MinLength, int MaxLength)
 						   //If Input was too long to store in Input[] (=> fgets() truncated it)
 			if ((Input[InputArrayMaxLen + 1] == '\0') && (Input[InputArrayMaxLen] != '\n'))
 			{
-				printf("\n\nRequired maximum length for called GetValidatedString() function " "\ncannot exceed %d characters", InputArrayMaxLen);
+				printf("\n\nRequired maximum length for called GetValidatedString() function " "\ncannot exceed %d characters", (int) InputArrayMaxLen);
 				printf("\n\nDo you wish to try again (Y/N)?: ");
 				YesorNo = GetValidatedYesNo(); //Use your version
 				if (YesorNo == 'N')

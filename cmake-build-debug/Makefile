@@ -123,6 +123,33 @@ UniversityStuff/fast:
 	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/build
 .PHONY : UniversityStuff/fast
 
+16/16.1.o: 16/16.1.c.o
+
+.PHONY : 16/16.1.o
+
+# target to build an object file
+16/16.1.c.o:
+	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/16/16.1.c.o
+.PHONY : 16/16.1.c.o
+
+16/16.1.i: 16/16.1.c.i
+
+.PHONY : 16/16.1.i
+
+# target to preprocess a source file
+16/16.1.c.i:
+	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/16/16.1.c.i
+.PHONY : 16/16.1.c.i
+
+16/16.1.s: 16/16.1.c.s
+
+.PHONY : 16/16.1.s
+
+# target to generate assembly for a file
+16/16.1.c.s:
+	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/16/16.1.c.s
+.PHONY : 16/16.1.c.s
+
 MySkeleton.o: MySkeleton.c.o
 
 .PHONY : MySkeleton.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... UniversityStuff"
+	@echo "... 16/16.1.o"
+	@echo "... 16/16.1.i"
+	@echo "... 16/16.1.s"
 	@echo "... MySkeleton.o"
 	@echo "... MySkeleton.i"
 	@echo "... MySkeleton.s"
