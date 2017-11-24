@@ -1,4 +1,6 @@
-"/Users/george/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/172.4343.16/CLion.app/Contents/bin/cmake/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/george/Documents/Programming/C/UniversityStuff
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/george/Documents/Programming/C/UniversityStuff/cmake-build-debug
+C:\Users\George\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\163.13906.4\bin\cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" F:\C
+CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
+  CMake 3.8 or higher is required.  You are running version 3.6.3
+
+
+-- Configuring incomplete, errors occurred!
