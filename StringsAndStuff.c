@@ -17,7 +17,7 @@ void ClearScreen();
 
 char GetValidatedChar(char Min, char Max);
 int GetValidatedInteger(int Min, int Max);
-float GetValidatedFloat(float Min, float Max);
+const char * GetValidatedFloat(float Min, float Max);
 char GetValidatedString(char ValidatedString[], int MinLength, int MaxLength);
 char GetValidatedYesNo();
 
@@ -126,7 +126,7 @@ int GetValidatedInteger(int Min, int Max)
 }
 
 /* Gets user-inputted float value. Validated for data type & value (Min->Max). */
-float GetValidatedFloat(float Min, float Max)
+const char * GetValidatedFloat(float Min, float Max)
 {
 	const int cTrue = 1;
 	const int cFalse = 0;

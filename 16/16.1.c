@@ -8,18 +8,18 @@
 #include <memory.h>
 
 void ShowMainMenu();
-void ReadAllRecordsFromFile();
+void ReadAllRecordsFromFile(struct BOOK AllRecords[]);
 void Exit();
 void Clearstdin();
 void ClearScreen();
 char GetValidatedChar(char Min, char Max);
 int GetValidatedInteger(int Min, int Max);
-float GetValidatedFloat(float Min, float Max);
+const char * GetValidatedFloat(float Min, float Max);
 char GetValidatedString(char ValidatedString[], int MinLength, int MaxLength);
 char GetValidatedYesNo();
+int DisplayMainOptions();
 
-#define MAX_LEN_TITLE = 5;
-#define GREETING "\n BOOK CATALOGUE"
+#define MAX_LEN_TITLE 5
 #define POUND_SIGN 156
 #define MAX_LEN_TITLE_NAME 8
 #define MAX_LEN_NAME_FIRST 10
@@ -34,16 +34,21 @@ char GetValidatedYesNo();
 int main()
 {
    // struct BOOK AllRecords[MAX_NUM_RECORDS];
-    int Choice = 0;
+    ClearScreen();
+    Clearstdin();
+    DisplayMainOptions();
+}
 
-    ReadAllRecordsFromFile();
+int DisplayMainOptions()
+{
+    int Choice = 0;
 
     do {
         ShowMainMenu();
         switch(Choice)
         {
             case 1:
-                //display all
+               // ReadAllRecordsFromFile(struct BOOK AllRecords[]);
                 break;
             case 2:
                 //display records selected
@@ -64,8 +69,7 @@ int main()
                 break;
         }
     } while (Choice != 0);
-
-    return 0;
+    return Choice;
 }
 
 struct NAME
@@ -80,7 +84,7 @@ struct BOOK
     struct NAME Author;
     int PubliccationYear;
     char Title[MAX_LEN_TITLE_NAME + 1];
-    float Price;
+    const char *Price;
 };
 
 void ShowMainMenu()
@@ -94,9 +98,16 @@ void ShowMainMenu()
     printf("0 >> Exit programme");
 }
 
-void ReadAllRecordsFromFile()
+void ReadAllRecordsFromFile(struct BOOK AllRecords[])
 {
 
+    char AuthorFirstName = (char) AllRecords->Author.FirstName;
+    char AuthorLastName = (char) AllRecords->Author.LastName;
+
+    printf(AllRecords->Title);
+    printf((const char *) AllRecords->PubliccationYear);
+    printf((const char *) AuthorFirstName, AuthorLastName);
+    printf(POUND_SIGN, AllRecords->Price);
 }
 
 void Exit()
@@ -105,40 +116,55 @@ void Exit()
     system("exit");
 }
 
-void AddRecords(struct BOOK AllRecords[], int *pNumRecords, int MaxNumRecords)
+void AddRecords(struct BOOK AllRecords[], const int *pNumRecords, int NumRecords)
 {
     char AddAnother; //yay or nay
+    int CFR = 0;
+    FILE * fp;
+
+    if(fopen(&fp, "b.txt") != (FILE *) CFR)
+    {
+        printf("Cannot open file!");
+        return;
+    }
 
     do
     {
-        if(*pNumRecords == MaxNumRecords)
+        if(*pNumRecords == NumRecords)
         {
             printf("The catalogue is full\n");
             return;
         }
         //append a new single record
         printf("Enter the Authors title: ");
-        GetValidatedString(AllRecords[*pNumRecords].Author.Title, 1, MAX_LEN_TITLE);
+        char *atInput = GetValidatedString(AllRecords[*pNumRecords].Author.Title, 1, MAX_LEN_TITLE) + "\n";
+        fprintf(fp, *atInput);
 
         printf("Enter the Authors first name: ");
-        GetValidatedString(AllRecords[*pNumRecords].Author.FirstName, 1, MAX_LEN_NAME_FIRST);
+        char *afInput = GetValidatedString(AllRecords[*pNumRecords].Author.FirstName, 1, MAX_LEN_NAME_FIRST) + "\n";
+        fprintf(fp, *afInput);
 
         printf("Enter the Authors last name: ");
-        GetValidatedString(AllRecords[*pNumRecords].Author.LastName, 1, MAX_LEN_NAME_LAST);
+        char *alInput = GetValidatedString(AllRecords[*pNumRecords].Author.LastName, 1, MAX_LEN_NAME_LAST) + "\n";
+        fprintf(fp, alInput);
 
         printf("Enter the publication year: (%d - %d) ", MIN_YEAR, MAX_YEAR);
-        AllRecords[*pNumRecords].PubliccationYear = GetValidatedInteger(MIN_YEAR, MAX_YEAR);
+        char *pyInput = AllRecords[*pNumRecords].PubliccationYear = GetValidatedInteger(MIN_YEAR, MAX_YEAR) + "\n";
+        fprintf(fp, pyInput);
 
         printf("Enter the price: %f");
-        AllRecords[*pNumRecords].Price = GetValidatedFloat(MIN_PRICE, MAX_PRICE);
+        char *prInput = AllRecords[*pNumRecords].Price = GetValidatedFloat(MIN_PRICE, MAX_PRICE);
+        fprintf(fp, *prInput);
 
         printf("Enter the title: ");
-        GetValidatedString(AllRecords[*pNumRecords].Title, 1, MAX_LEN_BOOK_TITLE);
+        char *titInput = GetValidatedString(AllRecords[*pNumRecords].Title, 1, MAX_LEN_BOOK_TITLE);
+        fprintf(fp, *titInput);
 
+        (NumRecords++);
 
-        AddAnother = "N";
+        AddAnother = 'N';
 
-        if(*pNumRecords < MaxNumRecords)
+        if(*pNumRecords < NumRecords)
         {
             printf("Do you want to add another record? (Y/N)");
             AddAnother = GetValidatedYesNo();
@@ -230,13 +256,13 @@ int GetValidatedInteger(int Min, int Max)
 }
 
 /* Gets user-inputted float value. Validated for data type & value (Min->Max). */
-float GetValidatedFloat(float Min, float Max)
+const char * GetValidatedFloat(float Min, float Max)
 {
     const int cTrue = 1;
     const int cFalse = 0;
 
     int ItemRead = cFalse;
-    float Input = 0;
+    const char *Input = 0;
     int Valid = cFalse; /* MUST be initialised to cFalse */
 
     /* NB Context-specific request - in calling function */

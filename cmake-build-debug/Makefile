@@ -150,6 +150,33 @@ UniversityStuff/fast:
 	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/16/16.1.c.s
 .PHONY : 16/16.1.c.s
 
+16/FileHandler.o: 16/FileHandler.c.o
+
+.PHONY : 16/FileHandler.o
+
+# target to build an object file
+16/FileHandler.c.o:
+	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/16/FileHandler.c.o
+.PHONY : 16/FileHandler.c.o
+
+16/FileHandler.i: 16/FileHandler.c.i
+
+.PHONY : 16/FileHandler.i
+
+# target to preprocess a source file
+16/FileHandler.c.i:
+	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/16/FileHandler.c.i
+.PHONY : 16/FileHandler.c.i
+
+16/FileHandler.s: 16/FileHandler.c.s
+
+.PHONY : 16/FileHandler.s
+
+# target to generate assembly for a file
+16/FileHandler.c.s:
+	$(MAKE) -f CMakeFiles/UniversityStuff.dir/build.make CMakeFiles/UniversityStuff.dir/16/FileHandler.c.s
+.PHONY : 16/FileHandler.c.s
+
 MySkeleton.o: MySkeleton.c.o
 
 .PHONY : MySkeleton.o
@@ -216,6 +243,9 @@ help:
 	@echo "... 16/16.1.o"
 	@echo "... 16/16.1.i"
 	@echo "... 16/16.1.s"
+	@echo "... 16/FileHandler.o"
+	@echo "... 16/FileHandler.i"
+	@echo "... 16/FileHandler.s"
 	@echo "... MySkeleton.o"
 	@echo "... MySkeleton.i"
 	@echo "... MySkeleton.s"
